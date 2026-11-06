@@ -65,12 +65,17 @@ public class BogusApp {
         this.count = 0;
     }
 
+    public String summary() {
+        return name + " has " + count + " item(s)";
+    }
+
     public static void main(String[] args) {
         BogusApp app = new BogusApp("widget", 5);
 
         System.out.println("Name: " + app.getName());
         System.out.println("Count: " + app.getCount());
         System.out.println("List: " + app.generateList());
+        System.out.println("Summary: " + app.summary());
         System.out.println("3 + 4 = " + add(3, 4));
         System.out.println(repeat("ha", 3));
     }
